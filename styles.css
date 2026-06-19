@@ -123,6 +123,10 @@ p {
   top: -2px;
 }
 
+.nav-logo .red {
+  color: #C41E3A;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
