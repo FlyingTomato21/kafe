@@ -8,13 +8,15 @@
 }
 
 :root {
-  /* Colors — Warm Cream */
-  --bg-primary: #F2EFE9;
-  --bg-secondary: #EDE9E1;
-  --text-primary: #1A1714;
-  --text-muted: #5F5E5A;
-  --text-hint: #888780;
-  --divider: #D6D0C4;
+  /* Colors — Brand v2 */
+  --bg-primary: #F4EFE6;      /* Paper */
+  --bg-secondary: #EAD9BE;    /* Silk */
+  --text-primary: #231A15;    /* Espresso */
+  --text-muted: #5A4F47;
+  --text-hint: #8A7F77;
+  --divider: #E0D5C7;
+  --accent: #C8772E;          /* Roast */
+  --accent-quiet: #9DB0A1;    /* Celadon */
 
   /* Typography */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -124,7 +126,7 @@ p {
 }
 
 .nav-logo .red {
-  color: #C41E3A;
+  color: var(--accent);
 }
 
 .nav-links {
@@ -509,7 +511,13 @@ p {
 }
 
 .findus-info h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.findus-intro {
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
 }
 
 .findus-detail {
