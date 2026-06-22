@@ -550,6 +550,108 @@ p {
   font-size: 0.875rem;
 }
 
+/* ============================================================
+   Flavor accents & signatures — v2 menu update
+   ============================================================ */
+
+/* Small flavor dot used inline before menu item names */
+.flavor-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+/* Larger flavor dot for the homepage signature cards */
+.flavor-dot-lg {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.flavor-dot.ube,    .flavor-dot-lg.ube    { background: #8A6FB0; }
+.flavor-dot.sesame, .flavor-dot-lg.sesame { background: #3A332E; }
+.flavor-dot.banana, .flavor-dot-lg.banana { background: #D8A24A; }
+.flavor-dot.matcha, .flavor-dot-lg.matcha { background: #7FA05A; }
+
+/* "our signature" / "the signature" pill tag */
+.menu-list-tag {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-heading);
+  letter-spacing: 0.5px;
+  color: #A85E1E;
+  background: #F3E2CF;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  margin-left: 0.625rem;
+  vertical-align: middle;
+}
+
+/* Homepage featured signatures grid */
+.signature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5px;
+  background: var(--divider);
+  border: 0.5px solid var(--divider);
+}
+
+.signature-card {
+  background: var(--bg-primary);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+}
+
+.signature-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.signature-card-number {
+  font-size: 0.75rem;
+  color: var(--text-hint);
+}
+
+.signature-card-name {
+  font-weight: var(--font-weight-heading);
+  font-size: 1.125rem;
+  letter-spacing: -0.3px;
+  margin-bottom: 0.5rem;
+}
+
+.signature-card-note {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.signature-card-foot {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signature-card-foot .menu-list-tag {
+  margin-left: 0;
+}
+
+.signature-card-price {
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero {
@@ -580,6 +682,10 @@ p {
 
   .menu-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .signature-grid {
+    grid-template-columns: 1fr;
   }
 
   .story-strip {
