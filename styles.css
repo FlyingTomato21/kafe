@@ -18,10 +18,19 @@
   --accent: #C8772E;          /* Roast */
   --accent-quiet: #9DB0A1;    /* Celadon */
 
+  /* Flavor palette */
+  --ube: #8A6FB0;
+  --sesame: #3A332E;
+  --banana: #D8A24A;
+  --matcha: #7FA05A;
+
   /* Typography */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-weight-body: 400;
   --font-weight-heading: 500;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 html {
@@ -749,4 +758,228 @@ p {
   .findus-info {
     padding: 3rem 1.5rem;
   }
+}
+
+/* ============================================================
+   Motion & color polish — v3 (animations + warmth)
+   Additive layer. Honors prefers-reduced-motion.
+   ============================================================ */
+
+/* --- Color pops: warm the numbered device & accents --- */
+.promise-number,
+.signature-card-number,
+.menu-list-number {
+  color: var(--accent);
+  font-weight: var(--font-weight-heading);
+  letter-spacing: 0.5px;
+}
+
+.nav-logo .red {
+  transition: color 0.25s var(--ease);
+}
+
+/* Warm radial glow behind the hero copy */
+.hero-content {
+  position: relative;
+}
+.hero-content::before {
+  content: "";
+  position: absolute;
+  top: 8%;
+  left: -10%;
+  width: 60%;
+  height: 70%;
+  background: radial-gradient(closest-side, rgba(200,119,46,0.14), transparent 70%);
+  filter: blur(8px);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-content > * { position: relative; z-index: 1; }
+
+/* Soft tonal wash on the visual panel + slow drift */
+.hero-visual {
+  background: linear-gradient(150deg, #EAD9BE 0%, #F0E3CC 55%, #E7D2B2 100%);
+}
+.hero-visual img {
+  animation: kf-float 7s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes kf-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* Thin flavor-spectrum accent line under the nav */
+.nav::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: linear-gradient(90deg,
+    var(--ube) 0%, var(--accent) 38%, var(--banana) 66%, var(--matcha) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease);
+}
+.nav.scrolled::after { transform: scaleX(1); }
+.nav.scrolled {
+  box-shadow: 0 1px 0 rgba(35,26,21,0.04), 0 8px 24px -16px rgba(35,26,21,0.25);
+}
+
+/* --- Hero entrance (runs on load) --- */
+.hero-content .eyebrow,
+.hero-content h1,
+.hero-content .tagline,
+.hero-content .hero-ctas {
+  opacity: 0;
+  animation: kf-rise 0.8s var(--ease) forwards;
+}
+.hero-content .eyebrow   { animation-delay: 0.05s; }
+.hero-content h1         { animation-delay: 0.16s; }
+.hero-content .tagline   { animation-delay: 0.28s; }
+.hero-content .hero-ctas { animation-delay: 0.40s; }
+
+.hero-visual {
+  opacity: 0;
+  animation: kf-fade 1s var(--ease) 0.2s forwards;
+}
+
+@keyframes kf-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes kf-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* --- Scroll reveal (JS adds .reveal then .is-visible) --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger children inside a revealed row */
+.reveal[data-stagger] > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+.reveal[data-stagger].is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal[data-stagger].is-visible > *:nth-child(1) { transition-delay: 0.00s; }
+.reveal[data-stagger].is-visible > *:nth-child(2) { transition-delay: 0.08s; }
+.reveal[data-stagger].is-visible > *:nth-child(3) { transition-delay: 0.16s; }
+.reveal[data-stagger].is-visible > *:nth-child(4) { transition-delay: 0.24s; }
+
+/* --- Hover life --- */
+.promise-item {
+  transition: background 0.3s var(--ease);
+}
+.promise-item:hover {
+  background: linear-gradient(180deg, rgba(200,119,46,0.05), transparent);
+}
+
+.signature-card {
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.signature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px -24px rgba(35,26,21,0.45);
+  z-index: 1;
+}
+.signature-card .flavor-dot-lg {
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.signature-card:hover .flavor-dot-lg {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 6px rgba(200,119,46,0.10);
+}
+
+.btn-primary,
+.btn-secondary,
+.nav-cta {
+  transition: transform 0.25s var(--ease), opacity 0.2s ease, border-color 0.2s ease, box-shadow 0.25s var(--ease);
+}
+.btn-primary:hover,
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -12px rgba(35,26,21,0.55);
+}
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* Animated underline for nav + footer links */
+.nav-links a,
+.footer-links a,
+.menu-strip-header a {
+  position: relative;
+}
+.nav-links a::after,
+.footer-links a::after,
+.menu-strip-header a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1.5px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+.nav-links a:hover::after,
+.footer-links a:hover::after,
+.menu-strip-header a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Story stat rows get a quiet accent edge on hover */
+.story-stat {
+  transition: box-shadow 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.story-stat:hover {
+  box-shadow: inset 3px 0 0 var(--accent);
+  transform: translateX(2px);
+}
+
+/* Menu list rows (menu page) */
+.menu-list-item {
+  transition: background 0.25s var(--ease);
+}
+.menu-list-item:hover {
+  background: linear-gradient(90deg, rgba(200,119,46,0.06), transparent);
+}
+
+/* --- Reduced motion: disable all the above movement --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-content .eyebrow,
+  .hero-content h1,
+  .hero-content .tagline,
+  .hero-content .hero-ctas,
+  .hero-visual,
+  .reveal,
+  .reveal[data-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero-visual img { animation: none !important; }
 }
