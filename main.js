@@ -38,13 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
     '.menu-strip-header',
     '.menu-teaser',
     '.menu-section',
+    '.menu-preview-card',
     '.story-content > *',
     '.page-header',
     '.findus-info',
     '.findus-map'
   ];
   // Containers whose children should stagger in
-  const staggerSelectors = ['.story-stats', '.menu-list'];
+  const staggerSelectors = ['.story-stats', '.menu-list', '.menu-preview'];
 
   const revealEls = document.querySelectorAll(revealSelectors.join(','));
   const staggerEls = document.querySelectorAll(staggerSelectors.join(','));

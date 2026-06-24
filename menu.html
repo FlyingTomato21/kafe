@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu — ka fe</title>
-  <meta name="description" content="Our menu is in research and development. Specialty coffee and matcha, signature flavors, and a small food menu — coming for our Spring 2027 opening. First confirmed: the caramelized banana latte.">
+  <meta name="description" content="Our menu is in research and development. Espresso classics, expertly crafted pourovers, signature flavors — coming for our Spring 2027 opening.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -29,20 +29,67 @@
   <!-- Page Header -->
   <header class="page-header">
     <h1>Menu</h1>
-    <p>In research &amp; development</p>
+    <p>In research &amp; development for Spring 2027</p>
   </header>
 
   <!-- Intro -->
   <section class="story-content">
-    <p>We're still in the kitchen. ka fe is in its research-and-development phase — sourcing beans and matcha, testing flavors, and dialing in every drink before we commit it to the menu.</p>
-
-    <p>Rather than post a menu we'll rewrite ten times before opening, we'd rather show you the real one when it's ready. What we can tell you now: it'll be specialty coffee and matcha made with real care, a few signature flavors worth remembering, and a small food menu — all in development for our Spring 2027 opening.</p>
-
-    <p>The espresso classics will all be there — cortados, cappuccinos, flat whites, lattes, americanos — made with beans we trust. And then there's the one that's already locked in.</p>
+    <p>We're still in the kitchen — sourcing beans, testing flavors, and dialing in every drink before we commit it to the menu. Here's what we're working on.</p>
   </section>
 
-  <!-- Confirmed signature -->
+  <!-- Menu Preview Grid -->
+  <section class="menu-preview">
+    <div class="menu-preview-card">
+      <div class="menu-preview-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M17 8h1a4 4 0 0 1 0 8h-1"/>
+          <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
+          <line x1="6" y1="2" x2="6" y2="4"/>
+          <line x1="10" y1="2" x2="10" y2="4"/>
+          <line x1="14" y1="2" x2="14" y2="4"/>
+        </svg>
+      </div>
+      <h3>Espresso classics</h3>
+      <p class="menu-preview-list">Cortados · Cappuccinos · Flat whites · Lattes · Americanos</p>
+      <p class="menu-preview-note">Made with beans from roasters we trust</p>
+      <span class="menu-list-tag">on the menu</span>
+    </div>
+
+    <div class="menu-preview-card">
+      <div class="menu-preview-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2v6"/>
+          <path d="M8 4l4 4 4-4"/>
+          <path d="M5 12h14"/>
+          <path d="M6 12v6c0 2 2 4 6 4s6-2 6-4v-6"/>
+        </svg>
+      </div>
+      <h3>Pourovers</h3>
+      <p class="menu-preview-list">Single origins · Rotating selections</p>
+      <p class="menu-preview-note">Expertly crafted, one cup at a time</p>
+      <span class="menu-list-tag">on the menu</span>
+    </div>
+
+    <div class="menu-preview-card">
+      <div class="menu-preview-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 17H5a2 2 0 0 0-2 2 2 2 0 0 0 2 2h14a2 2 0 0 0 2-2 2 2 0 0 0-2-2h-4"/>
+          <path d="M12 17V3"/>
+          <path d="M8 7l4-4 4 4"/>
+        </svg>
+      </div>
+      <h3>Matcha</h3>
+      <p class="menu-preview-list">Ceremonial grade · Hot or iced</p>
+      <p class="menu-preview-note">For when you want something different</p>
+      <span class="menu-list-tag">on the menu</span>
+    </div>
+  </section>
+
+  <!-- Signature Section -->
   <section class="menu-strip">
+    <div class="menu-strip-header">
+      <h2>First confirmed signature</h2>
+    </div>
     <div class="signature-grid single">
       <div class="signature-card">
         <div class="signature-card-top">
@@ -50,7 +97,7 @@
           <span class="signature-card-number">01</span>
         </div>
         <span class="signature-card-name">Caramelized banana latte</span>
-        <p class="signature-card-note">slow-caramelized banana, toasted garnish — our first confirmed signature</p>
+        <p class="signature-card-note">Slow-caramelized banana, toasted garnish — our first confirmed signature. More flavors coming as we lock them in.</p>
         <div class="signature-card-foot">
           <span class="menu-list-tag">on the menu</span>
           <span></span>
@@ -59,9 +106,24 @@
     </div>
   </section>
 
+  <!-- Coming Soon -->
+  <section class="menu-preview coming-soon">
+    <div class="menu-preview-card subtle">
+      <h3>Signature flavors</h3>
+      <p class="menu-preview-note">Asian-inspired drinks we're still dialing in — ube, black sesame, and more. Stay tuned.</p>
+      <span class="menu-list-tag muted">in development</span>
+    </div>
+
+    <div class="menu-preview-card subtle">
+      <h3>Food menu</h3>
+      <p class="menu-preview-note">A small menu of pastries and bites. Finalizing our partners now.</p>
+      <span class="menu-list-tag muted">in development</span>
+    </div>
+  </section>
+
   <!-- Outro -->
   <section class="story-content">
-    <p>More to come as we lock it in. Want to be first to see the full menu? <a href="findus.html">Say hello</a> and we'll keep you posted.</p>
+    <p>Want to be first to see the full menu? <a href="findus.html">Say hello</a> and we'll keep you posted.</p>
   </section>
 
   <!-- Footer -->
