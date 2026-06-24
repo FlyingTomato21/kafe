@@ -300,6 +300,37 @@ p {
   border-bottom: 0.5px solid var(--divider);
 }
 
+.menu-teaser {
+  max-width: 36rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu-teaser h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.menu-teaser p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.menu-teaser-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: var(--accent);
+  font-size: 0.9375rem;
+}
+
+/* Single confirmed signature — center one card instead of a 3-up grid */
+.signature-grid.single {
+  grid-template-columns: 1fr;
+  max-width: 22rem;
+  margin: 0 auto;
+}
+
 .menu-strip-header {
   display: flex;
   justify-content: space-between;

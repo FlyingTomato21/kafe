@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.signature-card',
     '.story-text',
     '.menu-strip-header',
+    '.menu-teaser',
     '.menu-section',
     '.story-content > *',
     '.page-header',
