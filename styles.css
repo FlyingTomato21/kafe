@@ -1014,3 +1014,74 @@ p {
   }
   .hero-visual img { animation: none !important; }
 }
+
+/* ── Email capture ─────────────────────────────── */
+.signup {
+  padding: 4.5rem 1.5rem;
+  background: var(--bg-secondary);
+  border-bottom: 0.5px solid var(--divider);
+}
+
+.signup-inner {
+  max-width: 32rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.signup-inner h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.signup-inner p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.signup-form {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.signup-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid var(--divider);
+  border-radius: 100px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.signup-form input::placeholder { color: var(--text-hint); }
+
+.signup-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.signup-form .btn-primary {
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 1rem;
+}
+
+.signup-fineprint {
+  font-size: 0.8125rem;
+  color: var(--text-hint);
+}
+
+.signup-success {
+  margin-top: 1.25rem;
+  color: var(--accent);
+  font-weight: var(--font-weight-heading);
+}
+
+@media (max-width: 480px) {
+  .signup-form { flex-direction: column; }
+  .signup-form .btn-primary { width: 100%; }
+}
