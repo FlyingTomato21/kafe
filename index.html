@@ -4,13 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ka fe — Coffee made personal</title>
-  <meta name="description" content="ka fe is a neighborhood café in New York City. Craft espresso and signature coffee and matcha drinks made from scratch, with great attention to detail — to the cup, and to you. Opening Spring 2027.">
+  <meta name="theme-color" content="#F4EFE6">
+  <meta name="description" content="ka fe is a neighborhood café in New York City. Craft espresso and signature drinks made from scratch, with great attention to detail. To the cup, and to you. Opening Spring 2027.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ka fe — Coffee made personal">
+  <meta property="og:description" content="A neighborhood café in New York City. Craft espresso and signature drinks made from scratch. Opening Spring 2027.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Skip to main content for keyboard users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Navigation -->
   <nav class="nav">
     <a href="index.html" class="nav-logo">ka <span class="red">fe</span></a>
@@ -27,11 +43,12 @@
   </nav>
 
   <!-- Hero -->
+  <main id="main-content">
   <section class="hero">
     <div class="hero-content">
       <p class="eyebrow">New York City · Coming Spring 2027</p>
       <h1>Coffee made personal.</h1>
-      <p class="tagline">Craft espresso and signature drinks made from scratch, with great attention to detail — to every cup, and to you. Made the way you like it.</p>
+      <p class="tagline">Craft espresso and signature drinks made from scratch, with great attention to detail. To every cup, and to you.</p>
       <div class="hero-ctas">
         <a href="menu.html" class="btn-primary">See the menu</a>
         <a href="findus.html" class="btn-secondary">Find us</a>
@@ -45,27 +62,24 @@
   <!-- Promise Strip -->
   <section class="promise-strip">
     <div class="promise-item">
-      <p class="promise-number">01</p>
       <p class="promise-title">Made here, from scratch</p>
-      <p class="promise-text">The banana caramel, the mascarpone cream, the strawberry compote, the syrups — all made in-house, in small batches, by hand. Nothing from a bottle.</p>
+      <p class="promise-text">The banana caramel, the mascarpone cream, the strawberry compote, the syrups. All made in-house, in small batches, by hand. Nothing from a bottle.</p>
     </div>
     <div class="promise-item">
-      <p class="promise-number">02</p>
       <p class="promise-title">A short menu, done right</p>
       <p class="promise-text">A few drinks made exceptionally beats a long list made adequately. Great beans from local roasters we trust, and a serious matcha.</p>
     </div>
     <div class="promise-item">
-      <p class="promise-number">03</p>
       <p class="promise-title">Made how you like it</p>
-      <p class="promise-text">Oat, extra shot, no sugar — your way, every time. Come back twice and we'll know your order.</p>
+      <p class="promise-text">Oat, extra shot, no sugar. Your way, every time. Come back twice and we'll know your order.</p>
     </div>
   </section>
 
   <!-- Menu Teaser Strip -->
   <section class="menu-strip">
     <div class="menu-teaser">
-      <h2>The menu's still in development</h2>
-      <p>Signature drinks made here from scratch, craft espresso and matcha, and a small food menu — all in the works for Spring 2027. First one confirmed: the caramelized banana latte, made with real spotted bananas slow-cooked to toffee.</p>
+      <h2>First confirmed: the caramelized banana latte</h2>
+      <p>Made with real spotted bananas slow-cooked to toffee. Signature drinks, craft espresso and matcha, and a small food menu are all in the works for Spring 2027.</p>
       <a href="menu.html" class="menu-teaser-link">See where we're at →</a>
     </div>
   </section>
@@ -74,7 +88,7 @@
   <section class="story-strip">
     <div class="story-text">
       <h2>The short version</h2>
-      <p>It started with making coffee every morning for someone — exactly the way she likes it. That's what ka fe is: drinks made here from scratch, and the same attention paid to you. Coffee and matcha, made the way you like it. The name is simple — say it out loud and it sounds like "café."</p>
+      <p>It started with making coffee every morning for someone. Exactly the way she likes it. That's what ka fe is: drinks made here from scratch, and the same attention paid to you. Coffee and matcha, made the way you like it.</p>
     </div>
     <div class="story-stats">
       <div class="story-stat">
@@ -96,14 +110,18 @@
   <section class="signup">
     <div class="signup-inner">
       <h2>Be first in line</h2>
-      <p>We open Spring 2027. Leave your email and we'll let you know when the doors open — and when the full menu drops.</p>
-      <form class="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
-        <button type="submit" class="btn-primary">Keep me posted</button>
+      <p>We open Spring 2027. Leave your email and we'll let you know when the doors open and when the full menu drops.</p>
+      <form class="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="signup-form">
+        <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address" autocomplete="email">
+        <button type="submit" class="btn-primary" id="signup-btn">Keep me posted</button>
       </form>
       <p class="signup-fineprint">No spam. Just the opening.</p>
+      <!-- Form states (hidden by default, shown via JS) -->
+      <p class="signup-success" id="signup-success" hidden>Thanks! We'll let you know when we open.</p>
+      <p class="signup-error" id="signup-error" hidden>Something went wrong. Please try again.</p>
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">

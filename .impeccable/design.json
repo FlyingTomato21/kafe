@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-01T00:00:00Z",
+  "title": "Design System: ka fe",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(95.5% 0.015 85)",
+        "tonalRamp": [
+          "oklch(25% 0.01 85)",
+          "oklch(40% 0.012 85)",
+          "oklch(55% 0.013 85)",
+          "oklch(70% 0.014 85)",
+          "oklch(82% 0.014 85)",
+          "oklch(90% 0.015 85)",
+          "oklch(95.5% 0.015 85)",
+          "oklch(98% 0.01 85)"
+        ]
+      },
+      "silk": {
+        "role": "neutral",
+        "displayName": "Silk",
+        "canonical": "oklch(89% 0.04 75)",
+        "tonalRamp": [
+          "oklch(25% 0.03 75)",
+          "oklch(40% 0.035 75)",
+          "oklch(55% 0.038 75)",
+          "oklch(70% 0.04 75)",
+          "oklch(80% 0.04 75)",
+          "oklch(89% 0.04 75)",
+          "oklch(94% 0.03 75)",
+          "oklch(97% 0.02 75)"
+        ]
+      },
+      "espresso": {
+        "role": "neutral",
+        "displayName": "Espresso",
+        "canonical": "oklch(22% 0.03 55)",
+        "tonalRamp": [
+          "oklch(15% 0.025 55)",
+          "oklch(22% 0.03 55)",
+          "oklch(35% 0.035 55)",
+          "oklch(48% 0.04 55)",
+          "oklch(60% 0.04 55)",
+          "oklch(72% 0.035 55)",
+          "oklch(84% 0.025 55)",
+          "oklch(93% 0.015 55)"
+        ]
+      },
+      "roast": {
+        "role": "primary",
+        "displayName": "Roast",
+        "canonical": "oklch(62% 0.15 55)",
+        "tonalRamp": [
+          "oklch(25% 0.08 55)",
+          "oklch(38% 0.1 55)",
+          "oklch(50% 0.13 55)",
+          "oklch(62% 0.15 55)",
+          "oklch(72% 0.13 55)",
+          "oklch(82% 0.1 55)",
+          "oklch(90% 0.06 55)",
+          "oklch(96% 0.03 55)"
+        ]
+      },
+      "celadon": {
+        "role": "secondary",
+        "displayName": "Celadon",
+        "canonical": "oklch(72% 0.05 160)",
+        "tonalRamp": [
+          "oklch(25% 0.03 160)",
+          "oklch(40% 0.04 160)",
+          "oklch(52% 0.045 160)",
+          "oklch(64% 0.05 160)",
+          "oklch(72% 0.05 160)",
+          "oklch(82% 0.04 160)",
+          "oklch(90% 0.03 160)",
+          "oklch(96% 0.015 160)"
+        ]
+      },
+      "ube": {
+        "role": "tertiary",
+        "displayName": "Ube",
+        "canonical": "oklch(58% 0.12 300)",
+        "tonalRamp": [
+          "oklch(25% 0.08 300)",
+          "oklch(38% 0.1 300)",
+          "oklch(48% 0.11 300)",
+          "oklch(58% 0.12 300)",
+          "oklch(68% 0.1 300)",
+          "oklch(78% 0.08 300)",
+          "oklch(88% 0.05 300)",
+          "oklch(95% 0.02 300)"
+        ]
+      },
+      "banana": {
+        "role": "tertiary",
+        "displayName": "Banana",
+        "canonical": "oklch(75% 0.14 85)",
+        "tonalRamp": [
+          "oklch(30% 0.08 85)",
+          "oklch(45% 0.1 85)",
+          "oklch(58% 0.12 85)",
+          "oklch(68% 0.13 85)",
+          "oklch(75% 0.14 85)",
+          "oklch(84% 0.1 85)",
+          "oklch(91% 0.06 85)",
+          "oklch(96% 0.03 85)"
+        ]
+      },
+      "matcha": {
+        "role": "tertiary",
+        "displayName": "Matcha",
+        "canonical": "oklch(65% 0.1 130)",
+        "tonalRamp": [
+          "oklch(25% 0.06 130)",
+          "oklch(38% 0.08 130)",
+          "oklch(50% 0.09 130)",
+          "oklch(58% 0.1 130)",
+          "oklch(65% 0.1 130)",
+          "oklch(75% 0.08 130)",
+          "oklch(85% 0.05 130)",
+          "oklch(94% 0.025 130)"
+        ]
+      },
+      "roast-dark": {
+        "role": "accent",
+        "displayName": "Roast Dark",
+        "canonical": "#A85E1E",
+        "purpose": "Darker roast variant for gradients and tags."
+      },
+      "glow-warm": {
+        "role": "effect",
+        "displayName": "Glow Warm",
+        "canonical": "#F3E2CF",
+        "purpose": "Warm radial glow behind hero content."
+      },
+      "glow-silk": {
+        "role": "effect",
+        "displayName": "Glow Silk",
+        "canonical": "#F0E3CC",
+        "purpose": "Nav accent gradient start color."
+      },
+      "glow-deep": {
+        "role": "effect",
+        "displayName": "Glow Deep",
+        "canonical": "#E7D2B2",
+        "purpose": "Nav accent gradient end color."
+      },
+      "error": {
+        "role": "semantic",
+        "displayName": "Error",
+        "canonical": "#B54A32",
+        "purpose": "Form error state messaging."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headlines only. One per page. 'Coffee made personal.'"
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headers. 'The short version.' 'Be first in line.'"
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptive copy. Max 55ch line length."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Eyebrows, hints, footer links. Lowercase, never shouted."
+      }
+    },
+    "shadows": [
+      {
+        "name": "nav-scroll",
+        "value": "0 1px 0 rgba(35,26,21,0.04), 0 8px 24px -16px rgba(35,26,21,0.25)",
+        "purpose": "Nav header shadow on scroll. Subtle, warm-tinted."
+      },
+      {
+        "name": "button-hover",
+        "value": "0 10px 22px -12px rgba(35,26,21,0.55)",
+        "purpose": "Primary button lift on hover. Directional and warm."
+      },
+      {
+        "name": "card-hover",
+        "value": "0 18px 40px -24px rgba(35,26,21,0.45)",
+        "purpose": "Signature card lift on hover. Diffuse and grounded."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Default easing for all transitions. Expo-out feel."
+      }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "900px" },
+      { "name": "mobile", "value": "640px" },
+      { "name": "small", "value": "480px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA. Espresso fill, Paper text, full pill radius.",
+      "html": "<button class=\"ds-btn-primary\">See the menu</button>",
+      "css": ".ds-btn-primary { display: inline-block; padding: 0.875rem 1.75rem; background: #231A15; color: #F4EFE6; border-radius: 100px; font-family: Inter, -apple-system, sans-serif; font-weight: 500; font-size: 1rem; border: none; cursor: pointer; transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease, box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-primary:hover { opacity: 0.85; transform: translateY(-2px); box-shadow: 0 10px 22px -12px rgba(35,26,21,0.55); } .ds-btn-primary:focus-visible { outline: 2px solid #C8772E; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ghost button with border. For secondary actions.",
+      "html": "<button class=\"ds-btn-secondary\">Find us</button>",
+      "css": ".ds-btn-secondary { display: inline-block; padding: 0.875rem 1.75rem; background: transparent; color: #231A15; border: 1px solid #E0D5C7; border-radius: 100px; font-family: Inter, -apple-system, sans-serif; font-weight: 500; font-size: 1rem; cursor: pointer; transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.2s ease; } .ds-btn-secondary:hover { border-color: #5A4F47; transform: translateY(-2px); } .ds-btn-secondary:focus-visible { outline: 2px solid #C8772E; outline-offset: 2px; }"
+    },
+    {
+      "name": "Email Input",
+      "kind": "input",
+      "refersTo": null,
+      "description": "Signup form input. Paper bg, pill shape, Roast focus ring.",
+      "html": "<input type=\"email\" class=\"ds-input\" placeholder=\"you@email.com\">",
+      "css": ".ds-input { flex: 1; min-width: 0; padding: 0.875rem 1.25rem; border: 1px solid #E0D5C7; border-radius: 100px; font-family: Inter, -apple-system, sans-serif; font-size: 1rem; background: #F4EFE6; color: #231A15; } .ds-input::placeholder { color: #8A7F77; } .ds-input:focus { outline: none; border-color: #C8772E; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Sticky header with logo, links, scroll shadow, and rainbow accent line.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav-logo\">ka <span class=\"ds-red\">fe</span></a><ul class=\"ds-nav-links\"><li><a href=\"#\">Menu</a></li><li><a href=\"#\">Our story</a></li><li><a href=\"#\">Find us</a></li></ul></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; border-bottom: 0.5px solid #E0D5C7; background: #F4EFE6; font-family: Inter, -apple-system, sans-serif; } .ds-nav-logo { font-weight: 500; font-size: 1.25rem; letter-spacing: -0.5px; color: #231A15; text-decoration: none; } .ds-nav-logo .ds-red { color: #C8772E; } .ds-nav-links { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; } .ds-nav-links a { font-size: 0.9375rem; color: #5A4F47; text-decoration: none; position: relative; transition: color 0.2s ease; } .ds-nav-links a:hover { color: #231A15; } .ds-nav-links a::after { content: ''; position: absolute; left: 0; bottom: -3px; width: 100%; height: 1.5px; background: #C8772E; transform: scaleX(0); transform-origin: left; transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1); } .ds-nav-links a:hover::after { transform: scaleX(1); }"
+    },
+    {
+      "name": "Flavor Dot (Small)",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "9px circular swatch for inline menu item flavor indicators.",
+      "html": "<span class=\"ds-flavor-dot ds-flavor-banana\"></span>",
+      "css": ".ds-flavor-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 0.5rem; vertical-align: middle; position: relative; top: -1px; } .ds-flavor-ube { background: #8A6FB0; } .ds-flavor-sesame { background: #3A332E; } .ds-flavor-banana { background: #D8A24A; } .ds-flavor-matcha { background: #7FA05A; }"
+    },
+    {
+      "name": "Flavor Dot (Large)",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "30px circular swatch for signature cards. Scales on hover.",
+      "html": "<span class=\"ds-flavor-dot-lg ds-flavor-banana\"></span>",
+      "css": ".ds-flavor-dot-lg { display: inline-block; width: 30px; height: 30px; border-radius: 50%; transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1); } .ds-flavor-dot-lg:hover { transform: scale(1.12); box-shadow: 0 0 0 6px rgba(200,119,46,0.10); } .ds-flavor-ube { background: #8A6FB0; } .ds-flavor-sesame { background: #3A332E; } .ds-flavor-banana { background: #D8A24A; } .ds-flavor-matcha { background: #7FA05A; }"
+    },
+    {
+      "name": "Signature Tag",
+      "kind": "chip",
+      "refersTo": null,
+      "description": "Small pill tag marking signature drinks on the menu.",
+      "html": "<span class=\"ds-tag\">our signature</span>",
+      "css": ".ds-tag { display: inline-block; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.5px; color: #A85E1E; background: #F3E2CF; padding: 0.2rem 0.6rem; border-radius: 100px; font-family: Inter, -apple-system, sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Neighborhood Counter",
+    "overview": "This is the visual language of a place where everyone belongs. The barista remembers your order. The taxi driver and the pour-over purist sit at the same counter. There's craft here — real craft, made from scratch — but it's never performed or explained to death. It just shows up in the cup.\n\nThe system practices warm minimalism: clean surfaces that breathe, but never cold or austere. Paper-warm backgrounds, hairline dividers, generous whitespace. The restraint creates room for what matters: the coffee, the story, the invitation. Every element earns its place.\n\nWhat this system rejects: pretentious third-wave gatekeeping, generic chain-café corporate-ness, and the forced-artisanal aesthetic of reclaimed wood and mason jars.",
+    "keyCharacteristics": [
+      "Paper-warm palette: cream backgrounds, espresso text, roast accents",
+      "Single typeface (Inter) in two weights — nothing to prove",
+      "Hairline dividers, not heavy borders",
+      "Generous breathing room; density is earned",
+      "Motion that responds, never performs",
+      "A flavor palette (ube, sesame, banana, matcha) that adds personality without overwhelming"
+    ],
+    "rules": [
+      { "name": "The Roast Scarcity Rule", "body": "The primary accent (Roast) appears on ≤15% of any screen. Its warmth is the punctuation, not the sentence.", "section": "colors" },
+      { "name": "The Flavor Dot Rule", "body": "Flavor colors appear only as small dots (9px inline, 30px on cards) — never as backgrounds, never as large fills. They're garnish, not the dish.", "section": "colors" },
+      { "name": "The One Family Rule", "body": "Inter only. No pairing, no display font. The restraint is the statement.", "section": "typography" },
+      { "name": "The Eyebrow Restraint Rule", "body": "Eyebrows appear only where they add real information — location, timing, category. One per page, maximum.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. Shadows appear only as feedback (hover, scroll, focus) — never decorative, never at rest.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Paper (#F4EFE6) as the primary body background. The warmth is the identity.",
+      "Do use Espresso (#231A15) for primary text, never pure black.",
+      "Do use hairline dividers (0.5px) to separate sections.",
+      "Do let content breathe. Generous whitespace (4rem section padding) is the norm.",
+      "Do use motion as feedback: hover lifts, scroll reveals, focus transitions.",
+      "Do respect reduced motion. Every animation has a prefers-reduced-motion alternative.",
+      "Do keep the accent (Roast) scarce. It should feel like a warm surprise, not wallpaper."
+    ],
+    "donts": [
+      "Don't use pretentious third-wave coffee language. No 'artisanal,' 'curated,' or gatekeeping vibes.",
+      "Don't use generic stock photography. No people laughing at salads.",
+      "Don't use reclaimed wood textures, mason jar imagery, or chalkboard fonts.",
+      "Don't use gradient text, glassmorphism, or side-stripe borders.",
+      "Don't add numbered eyebrows (01 / 02 / 03) to every section as scaffolding.",
+      "Don't use multiple typefaces. Inter is the only face.",
+      "Don't use flavor palette colors as backgrounds or large fills. Dots only.",
+      "Don't add shadows to resting elements. Flat by default; shadows are feedback."
+    ]
+  }
+}

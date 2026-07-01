@@ -1,6 +1,52 @@
 // Ka Fe — Main JavaScript
 
 document.addEventListener('DOMContentLoaded', () => {
+  /* ---- Email signup form handling ---- */
+  const signupForm = document.getElementById('signup-form');
+  const signupBtn = document.getElementById('signup-btn');
+  const signupSuccess = document.getElementById('signup-success');
+  const signupError = document.getElementById('signup-error');
+  const signupFineprint = document.querySelector('.signup-fineprint');
+
+  if (signupForm) {
+    signupForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Prevent double submission
+      if (signupBtn.classList.contains('is-loading')) return;
+
+      // Show loading state
+      signupBtn.classList.add('is-loading');
+      signupBtn.textContent = 'Sending...';
+      signupError.hidden = true;
+
+      const formData = new FormData(signupForm);
+
+      try {
+        const response = await fetch(signupForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          // Success: hide form, show success message
+          signupForm.classList.add('is-hidden');
+          if (signupFineprint) signupFineprint.classList.add('is-hidden');
+          signupSuccess.hidden = false;
+        } else {
+          // Server error
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        // Network or server error: show error, allow retry
+        signupError.hidden = false;
+        signupBtn.classList.remove('is-loading');
+        signupBtn.textContent = 'Keep me posted';
+      }
+    });
+  }
+
   /* ---- Mobile navigation toggle ---- */
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');

@@ -1,0 +1,6 @@
+{
+  "files": ["index.html", "menu.html", "story.html", "findus.html"],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "cspChecked": true
+}
