@@ -4,13 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu — ka fe</title>
+  <meta name="theme-color" content="#F4EFE6">
   <meta name="description" content="Our menu is in research and development. Craft espresso and matcha, signature drinks made here from scratch, and a small food menu, coming for our Spring 2027 opening. First confirmed: the caramelized banana latte.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Menu — ka fe">
+  <meta property="og:description" content="Craft espresso, matcha, and signature drinks made from scratch. Coming Spring 2027.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Skip to main content for keyboard users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Navigation -->
   <nav class="nav">
     <a href="index.html" class="nav-logo">ka <span class="red">fe</span></a>
@@ -27,6 +43,7 @@
   </nav>
 
   <!-- Page Header -->
+  <main id="main-content">
   <header class="page-header">
     <h1>Menu</h1>
     <p>In research &amp; development</p>
@@ -34,11 +51,11 @@
 
   <!-- Intro -->
   <section class="story-content">
-    <p>We're still in the kitchen. ka fe is in its research-and-development phase — sourcing beans and matcha, testing flavors, and dialing in every drink before we commit it to the menu.</p>
+    <p>We're still in the kitchen. ka fe is in its research-and-development phase: sourcing beans and matcha, testing flavors, and dialing in every drink before we commit it to the menu.</p>
 
-    <p>Rather than post a menu we'll rewrite ten times before opening, we'd rather show you the real one when it's ready. What we can tell you now: it'll be craft coffee and matcha, and a few signature drinks made here from scratch — the banana caramel, the mascarpone cream, the strawberry compote, the syrups, all made in-house by hand. Plus a small food menu — all in development for our Spring 2027 opening.</p>
+    <p>Rather than post a menu we'll rewrite ten times before opening, we'd rather show you the real one when it's ready. What we can tell you now: it'll be craft coffee and matcha, and a few signature drinks made here from scratch. The banana caramel, the mascarpone cream, the strawberry compote, the syrups. All made in-house by hand. Plus a small food menu, all in development for our Spring 2027 opening.</p>
 
-    <p>The espresso classics will all be there — cortados, cappuccinos, flat whites, lattes, americanos — made with great beans from great local roasters. And then there's the one that's already locked in.</p>
+    <p>The espresso classics will all be there: cortados, cappuccinos, flat whites, lattes, americanos. Made with great beans from great local roasters. And then there's the one that's already locked in.</p>
   </section>
 
   <!-- Confirmed signature -->
@@ -47,10 +64,9 @@
       <div class="signature-card">
         <div class="signature-card-top">
           <span class="flavor-dot-lg banana"></span>
-          <span class="signature-card-number">01</span>
         </div>
         <span class="signature-card-name">Caramelized banana latte</span>
-        <p class="signature-card-note">real spotted bananas, slow-cooked to toffee — our first confirmed signature</p>
+        <p class="signature-card-note">Real spotted bananas, slow-cooked to toffee. Our first confirmed signature.</p>
         <div class="signature-card-foot">
           <span class="menu-list-tag">on the menu</span>
           <span></span>
@@ -63,6 +79,7 @@
   <section class="story-content">
     <p>More to come as we lock it in. Want to be first to see the full menu? <a href="findus.html">Say hello</a> and we'll keep you posted.</p>
   </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
