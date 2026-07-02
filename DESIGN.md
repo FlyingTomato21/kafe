@@ -43,6 +43,10 @@ typography:
     fontWeight: 400
     lineHeight: 1.4
     letterSpacing: "0.5px"
+  cjk:
+    fontFamily: "Noto Sans SC, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"
+    fontWeight: 500
+    note: "Chinese glyphs only (咖啡) — Inter has no CJK coverage"
 rounded:
   full: "100px"
   none: "0"
@@ -138,7 +142,7 @@ Four named colors for signature drinks. Each appears as a small dot on the menu:
 
 ### Named Rules
 
-**The One Family Rule.** Inter only. No pairing, no display font. The restraint is the statement.
+**The One Family Rule.** Inter only. No pairing, no display font. The restraint is the statement. One scoped exception: Chinese characters (咖啡) render in **Noto Sans SC** (500, loaded as a two-character subset) because Inter has no CJK glyphs. It appears only where 咖啡 appears — never for Latin text.
 
 **The Eyebrow Restraint Rule.** Eyebrows (small label text above headlines) appear only where they add real information — location, timing, category. One per page, maximum. They are not scaffolding; they are address labels.
 

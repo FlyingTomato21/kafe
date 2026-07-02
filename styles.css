@@ -16,7 +16,11 @@
   --text-hint: #8A7F77;
   --divider: #E0D5C7;
   --accent: #C8772E;          /* Roast */
+  --accent-dark: #A85E1E;     /* Roast, darkened */
   --accent-quiet: #9DB0A1;    /* Celadon */
+
+  /* CJK — Inter has no Chinese glyphs; subset of Noto Sans SC for 咖啡 */
+  --font-family-cjk: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 
   /* Flavor palette */
   --ube: #8A6FB0;
@@ -1006,6 +1010,114 @@ p {
     transform: none !important;
   }
   .hero-visual img { animation: none !important; }
+}
+
+/* ── Name origin — ka fe / 咖啡 / café ─────────── */
+.name-strip {
+  padding: 5.5rem 1.5rem 6rem;
+  border-bottom: 0.5px solid var(--divider);
+  text-align: center;
+}
+
+/* Three stacked forms of the name, crossfading on a slow loop */
+.name-cycle {
+  position: relative;
+  height: 1.3em;
+  font-size: clamp(2.75rem, 7vw, 5rem);
+  font-weight: var(--font-weight-heading);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  max-width: none;
+}
+
+.name-form {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: kf-name-cycle 12s var(--ease) infinite;
+}
+.name-form:nth-child(2) { animation-delay: 4s; }
+.name-form:nth-child(3) { animation-delay: 8s; }
+
+/* Linger on whichever form is up when the reader hovers */
+.name-cycle:hover .name-form { animation-play-state: paused; }
+
+.name-form .red { color: var(--accent); }
+
+.name-cjk {
+  font-family: var(--font-family-cjk);
+  letter-spacing: 0.06em;
+}
+
+@keyframes kf-name-cycle {
+  0%     { opacity: 0; transform: translateY(0.3em);  filter: blur(8px); }
+  5%     { opacity: 1; transform: translateY(0);      filter: blur(0); }
+  28%    { opacity: 1; transform: translateY(0);      filter: blur(0); }
+  33.33% { opacity: 0; transform: translateY(-0.3em); filter: blur(8px); }
+  100%   { opacity: 0; transform: translateY(-0.3em); filter: blur(8px); }
+}
+
+.name-caption {
+  margin: 1.75rem auto 0;
+  color: var(--text-muted);
+  max-width: 34rem;
+  line-height: 1.7;
+}
+
+.name-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: var(--accent);
+  font-size: 0.9375rem;
+}
+
+/* Inline 咖啡 in prose (story page) */
+.cjk {
+  font-family: var(--font-family-cjk);
+}
+
+/* Accent links (menu teaser + name link): color deepens, underline draws in */
+.menu-teaser-link,
+.name-link {
+  position: relative;
+  transition: color 0.25s var(--ease);
+}
+.menu-teaser-link:hover,
+.name-link:hover {
+  color: var(--accent-dark);
+}
+.menu-teaser-link::after,
+.name-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1.5px;
+  background: var(--accent-dark);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+.menu-teaser-link:hover::after,
+.name-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Reduced motion: no cycle — settle on "ka fe", let the caption carry the meaning */
+@media (prefers-reduced-motion: reduce) {
+  .name-form {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+  .name-form:first-child {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
 }
 
 /* ── Email capture ─────────────────────────────── */

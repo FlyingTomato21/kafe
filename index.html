@@ -21,6 +21,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Two-character subset (咖啡) — Inter has no CJK glyphs -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&text=%E5%92%96%E5%95%A1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -80,7 +82,7 @@
     <div class="menu-teaser">
       <h2>First confirmed: the caramelized banana latte</h2>
       <p>Made with real spotted bananas slow-cooked to toffee. Signature drinks, craft espresso and matcha, and a small food menu are all in the works for Spring 2027.</p>
-      <a href="menu.html" class="menu-teaser-link">See where we're at →</a>
+      <a href="menu.html" class="menu-teaser-link">See the menu so far →</a>
     </div>
   </section>
 
@@ -106,11 +108,22 @@
     </div>
   </section>
 
+  <!-- Name origin -->
+  <section class="name-strip">
+    <p class="name-cycle" role="img" aria-label="ka fe — 咖啡 — café">
+      <span class="name-form" aria-hidden="true">ka <span class="red">fe</span></span>
+      <span class="name-form name-cjk" lang="zh-Hans" aria-hidden="true">咖啡</span>
+      <span class="name-form" aria-hidden="true">café</span>
+    </p>
+    <p class="name-caption">In Chinese, coffee is <span lang="zh-Hans">咖啡</span> — kāfēi. Say it out loud and it sounds just like "café." One word, two languages, both home.</p>
+    <a href="story.html" class="name-link">The story behind the name →</a>
+  </section>
+
   <!-- Email capture -->
   <section class="signup">
     <div class="signup-inner">
       <h2>Be first in line</h2>
-      <p>We open Spring 2027. Leave your email and we'll let you know when the doors open and when the full menu drops.</p>
+      <p>We open Spring 2027. Leave your email and we'll let you know when the doors open — and your first caramelized banana latte is on us.</p>
       <form class="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="signup-form">
         <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address" autocomplete="email">
         <button type="submit" class="btn-primary" id="signup-btn">Keep me posted</button>

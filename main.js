@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.story-text',
     '.menu-strip-header',
     '.menu-teaser',
+    '.name-strip',
     '.menu-section',
     '.story-content > *',
     '.page-header',
